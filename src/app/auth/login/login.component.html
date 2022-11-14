@@ -1,0 +1,77 @@
+<!-- Start >> Login -->
+<div class="vertical-center bg-light">
+    <div class="card card-center p-0 p-md-3 shadow">
+        <!-- Logo -->
+        <div class="m-auto">
+
+            <a href="/start">
+                <img src="../../../../assets/images/marca/Donde Compro Marca FINAL.png" alt="Marca DóndeCompro?" height="99px">
+            </a>
+        </div>
+
+        <!-- Card Login -->
+        <div class="row m-3">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <form class="container-form" [formGroup]="frmLogin" (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-12">
+                            <div class="row">
+                                <div class="col-md-12 col-12 text-center mb-4">
+                                    <h3 class="fw-bold">¡Que bueno verte de nuevo!</h3>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label for="username">Ingresa tu correo</label>
+                                <div class="input-icon input-icon-right">
+                                    <input type="email" class="form-control form-control-color" formControlName="userName" autocomplete="off" required>
+                                    <span>
+                                        <i class="bi bi-person-fill text-muted"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <label for="password">Ingresa tu contraseña</label>
+                                <div class="input-icon input-icon-right">
+                                    <input type="password" class="form-control form-control-color" formControlName="password" autocomplete="off" required>
+                                    <span>
+                                        <i class="bi bi-lock-fill text-muted"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2 d-flex align-items-center">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12 text-md-right text-center mb-2">
+                            <div class="d-flex justify-content-center">
+                                <input id="checkUser" type="checkbox" formControlName="remember">
+                                <label for="checkUser" class="text-xs mb-0">¿Te gustaria que recordemos tu correo?</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12 text-md-right text-center mb-2">
+                            <a href="javascript:void(0);">
+                                <a href="javascript:void(0);"><span class="text-xs text-primary fw-bold">¿Olvidaste tu contraseña?</span></a>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row mb-3 mt-3">
+                        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> ¡INGRESA!
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row mb-5">
+                        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                            <span class="text-xs text-muted me-3">¿Aún no tienes cuenta?</span>
+                            <a href="javascript:void(0);" routerLink="/auth/register"><span
+                                    class="text-xs text-primary fw-bold">Crea una ahora</span></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End >> Login -->

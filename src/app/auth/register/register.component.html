@@ -1,0 +1,107 @@
+<div class="vertical-center bg-light">
+    <div class="card card-center p-0 px-4 shadow">
+        <div class="row m-3">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <form class="container-form mt-4" [formGroup]="frmRegister" (ngSubmit)="onSubmit()" >
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-12">
+                            <div class="row">
+                                <div class="col-md-12 col-12 mb-4 text-center">
+                                    <h3 class="fw-bold">Registro</h3>
+                                    <span class="text-md">Registrate gratis y empeza a ahorrar en tus compras</span>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <label for="username">¿Cual es tu nombre completo?</label>
+                                <div class="input-icon input-icon-right">
+                                    <input type="text" class="form-control form-control-color" formControlName="nombreComleto" autocomplete="off" required>
+                                </div>
+                            </div>
+
+
+
+                            <div class="input-group mb-2">
+                                <label for="username">¿Cual es tu correo?</label>
+                                <div class="input-icon input-icon-right">
+                                    <input type="email" class="form-control form-control-color" formControlName="userName" autocomplete="off" required>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <label for="username">Provincia</label>
+                                <div class="input-icon input-icon-right">
+                                    <input type="text" class="form-control form-control-color" formControlName="provincia" autocomplete="off" required>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <label for="username">Localidad</label>
+                                <div class="input-icon input-icon-right">
+                                    <input type="text" class="form-control form-control-color" formControlName="localidad" autocomplete="off" required>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <label for="Email">Coloca una contraseña</label>
+                                <div class="input-icon input-icon-right">
+                                    <input type="password" class="form-control form-control-color" formControlName="password" autocomplete="off" required>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <label for="ConfirmPassword">Confirmanos tu contraseña</label>
+                                <div class="input-icon input-icon-right">
+                                    <input type="password" class="form-control form-control-color" formControlName="reTypePassword" autocomplete="off" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2 pt-4 d-flex align-items-center">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                            <div class="form-check mb-3 d-flex justify-content-center">
+                                <input id="checkbox" type="checkbox" formControlName="terms">
+                                <label for="checkbox" class="text-xs mb-0">Acepto los términos y condiciones de uso.</label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contrato" target="_blank">
+                        <div class="col-md-12 col-12 mb-4 text-center">
+                            <h4 class="text-md text-primary">Nuestros terminos</h4>
+                        </div>
+                    </a>
+                    <!-- aviso de temrinos y condiciones de uso -->
+                    <div class="row">
+                        <div class="col-md-12 col-12 mb-4 text-center">
+                            <h3 class="text-md text-danger" *ngIf="!this.frmRegister.get('terms')?.value" >Por favor, acepta los terminos</h3>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <button type="submit"
+                                class="btn btn-primary btn-block col-md-10 offset-md-1 col-sm-10 offset-sm-1 col-10 offset-1" >
+                                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> ¡Crear cuenta!
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                            <span class="text-xs text-muted me-3">¿Ya tenes una cuenta con nosotros?</span>
+                            <a href="javascript:void(0);" routerLink="/auth/login" ><span
+                                    class="text-xs text-primary fw-bold">Inicia Sesion</span></a>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <button mat-icon-button color="primary" aria-label="Inicio" class="col-md-12 col-sm-12 col-xs-12 text-center">
+                            <mat-icon routerLink="/" >home</mat-icon>
+                          </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</div>
