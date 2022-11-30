@@ -1,1 +1,115 @@
-<p>promos-comercios works!</p>
+<div class="containerasd">
+
+  <mat-grid-list cols="6" rowHeight="100px">
+
+    <!-- PROMOS VIGENTES -->
+    <mat-grid-tile colspan="6" rowspan="4">
+      <mat-grid-tile-header>Tus promos vigentes </mat-grid-tile-header>
+
+      <mat-card *ngFor="let promo of promos" class="promosCard">
+        <mat-card-title>
+          {{promo.nombre}}
+        </mat-card-title>
+        <mat-card-subtitle>
+                    <span>{{promo.descripcion}}</span>
+        </mat-card-subtitle>
+        <mat-card-subtitle>
+          <span>Desde</span>{{promo.fechaInicio}} <span>Hasta</span>{{promo.fechaFin}}
+        </mat-card-subtitle>
+
+        <mat-card-content>
+          <div mat-line> {{promo.producto1}} </div>
+          <div mat-line> {{promo.producto2}} </div>
+          <div mat-line> {{promo.producto3}} </div>
+
+
+        </mat-card-content>
+
+        <mat-card-footer>
+          <div mat-line>$ {{promo.precio}}</div>
+        </mat-card-footer>
+      </mat-card>
+
+    </mat-grid-tile>
+
+    <!-- CREAR UNA NUEVA PROMO -->
+    <mat-grid-tile colspan="4" rowspan="8">
+      <mat-grid-tile-header>Crear una promo nueva</mat-grid-tile-header>
+
+      <mat-card class="crearNuevaPromo">
+        <!-- titulo de la promo  -->
+        <mat-form-field appearance="fill" floatLabel="always">
+          <mat-label>Nombre de la promo</mat-label>
+          <input matInput type="text" class="example-right-align" placeholder="Ponele nombre a tu promo"
+            autocomplete="off">
+        </mat-form-field>
+
+        <!-- descripciòn de la promo  -->
+        <mat-form-field appearance="fill" floatLabel="always">
+          <mat-label>Descripción</mat-label>
+          <input matInput type="text" class="example-right-align" placeholder="Describí la promo" autocomplete="off">
+        </mat-form-field>
+
+        <!-- producto 1  -->
+        <mat-form-field appearance="fill" floatLabel="always">
+          <mat-label>Producto 1</mat-label>
+          <input matInput type="text" class="example-right-align" placeholder="Producto 1" autocomplete="off">
+
+        </mat-form-field>
+
+        <!-- producto 2  -->
+        <mat-form-field appearance="fill" floatLabel="always">
+          <mat-label>Producto 2</mat-label>
+          <input matInput type="text" class="example-right-align" placeholder="Producto 2" autocomplete="off">
+
+        </mat-form-field>
+
+        <!-- producto 3  -->
+        <mat-form-field appearance="fill" floatLabel="always">
+          <mat-label>Producto 3</mat-label>
+          <input matInput type="text" class="example-right-align" placeholder="Producto 3" autocomplete="off">
+
+        </mat-form-field>
+
+        <!-- FECHA DE INICIO DE LA PROMO -->
+        <mat-form-field appearance="fill">
+          <mat-label>Inicio de la promo</mat-label>
+          <input matInput [matDatepicker]="inicio" autocomplete="off">
+          <mat-datepicker-toggle matSuffix [for]="inicio"></mat-datepicker-toggle>
+          <mat-datepicker #inicio></mat-datepicker>
+        </mat-form-field>
+
+        <!-- FECHA DE FINALIZACIÓN DE LA PROMO -->
+        <mat-form-field appearance="fill">
+          <mat-label>Fin de la promo</mat-label>
+          <input matInput [matDatepicker]="fin" autocomplete="off">
+          <mat-datepicker-toggle matSuffix [for]="fin"></mat-datepicker-toggle>
+          <mat-datepicker #fin></mat-datepicker>
+          
+        </mat-form-field>
+
+        <!-- PRECIO  -->
+        <mat-form-field appearance="fill" floatLabel="always">
+          <mat-label>Precio</mat-label>
+          <input matInput type="number" class="example-right-align" placeholder="0" autocomplete="off">
+          <span matPrefix>$&nbsp;</span>
+        </mat-form-field>
+
+        <!-- ACCIONES -->
+        <mat-card-footer class="butonCrearPromo">
+          <button mat-raised-button color="primary">Crear promo</button>
+        </mat-card-footer>
+      </mat-card>
+
+    </mat-grid-tile>
+
+    <!-- Estadisticas -->
+    <mat-grid-tile colspan="2" rowspan="3">
+    <mat-grid-tile-header>Estadisticas</mat-grid-tile-header>
+     </mat-grid-tile>
+
+
+  </mat-grid-list>
+
+
+</div>

@@ -6,7 +6,7 @@ import { map, shareReplay } from 'rxjs/operators';
 @Component({
   selector: 'app-dashboard-comercios',
   templateUrl: './dashboard-comercios.component.html',
-  styleUrls: ['./dashboard-comercios.component.css']
+  styleUrls: ['./dashboard-comercios.component.scss']
 })
 export class DashboardComerciosComponent {
 

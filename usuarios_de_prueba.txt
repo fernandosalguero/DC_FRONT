@@ -1,0 +1,11 @@
+Usuario Comercio: 
+Usuario: comercio1@gmail.com
+Contraseña:  123
+
+Usuario SuperAdmin
+Usuario: fernandogabrielsalguero@gmail.com
+Contraseña: Heladera1
+
+Usuario Familia
+Usuario: familia1@gmail.com
+Contraseña: 123

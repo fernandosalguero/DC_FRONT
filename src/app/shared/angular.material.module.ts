@@ -39,14 +39,10 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LayoutModule } from '@angular/cdk/layout';
-
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
-  declarations: [
-
-  
-
-  ],
+  declarations: [ ],
   imports: [
     CommonModule,
     MatAutocompleteModule,
@@ -85,7 +81,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatTooltipModule,
     MatTreeModule,
     FlexLayoutModule,
-    LayoutModule
+    LayoutModule,
+    MatNativeDateModule
   ],
   exports: [
     MatAutocompleteModule,
@@ -124,7 +121,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatTooltipModule,
     MatTreeModule,
     FlexLayoutModule,
-    LayoutModule
+    LayoutModule,
+    MatNativeDateModule
   ]
 })
 export class AngularMaterialModule { }
